@@ -8,3 +8,4 @@ n = int(input("input number :"))
 l = [random.randint(1,100) for i in range(n)]
 v= np.array(l, dtype='int16')
 print(v)
+#
