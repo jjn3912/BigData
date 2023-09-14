@@ -4,6 +4,7 @@ from tkinter import messagebox
 
 def press_enter_key(ev):
     click_button()
+    messagebox.showinfo('coordinate value', f"({ev.x}, {ev.y})")
 def click_button():
     try:
          r, c = map(int,en_row_column.get().split())
