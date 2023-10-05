@@ -1,7 +1,7 @@
 # import matplotlib.pyplot as plt
 import pandas as pd
 import tkinter as tk
-from sklearn.linear_model import LinearRegression
+import gmlearn
 
 
 def predict_life_satisfaction():
@@ -16,7 +16,7 @@ def predict_life_satisfaction():
     # plt.axis([23500, 62500, 4, 9])
     # plt.show()
 
-    model = LinearRegression()
+    model = gmlearn.LinearRegression()
     model.fit(X, y)
 
     # predict new GDP per capita (South Korea 2020)
