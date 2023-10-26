@@ -1,11 +1,15 @@
 import numpy as np
 import random
-np_1d = np.arange(1,10,2)
-print(np_1d, type(np_1d))
-print(np_1d, type(np_1d[0]))
-print(np_1d.ndim)
-print(np_1d.size)
-print(np_1d.shape)
+def info(x):
+    print(f"배열의 차원은{x.ndim}입니다")
+    print(f"배열의 Shape는{x.shape}입니다")
+    print(f"배열 원소의 개수는{x.size}개 입니다")
+
+np_1d = np.arange(1,20,2)
+np_1d = np_1d.reshape(1,2,5)
+print(np_1d)
+info(np_1d)
+
 # any_list = [91, "university",3.91,(5, 7)]
 # converted_any_list = ["1", "university","3.91","(5, 7)"]
 #
