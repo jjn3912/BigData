@@ -12,13 +12,7 @@ df = pd.DataFrame(
 
 )
 print(df)
-#df_copy = df.iloc[:,[0, 2]]
-df_copy = df.loc[:, 'KOR':'MAT':2]
+df_copy = df.loc[df['KOR']>=95,['KOR','MAT']]
 print(df_copy)
-df = (pd.melt(df).
-rename(columns={
-    'variable':'subject',
-    'value': 'score'
-}).query('score >= 90').sort_values('score', ascending=False))
-print(df)
-print(df.iloc[:,[1]])
+print(df.at[1,'MAT'])
+print(df.iat[0,2])
