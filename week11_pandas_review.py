@@ -9,7 +9,9 @@ df = pd.DataFrame(
 
 )
 print(df)
-
+print(df.sort_values('MAT'))
+df = df.drop(columns=['ENG'])
+print(df)
 df2 = pd.DataFrame(
     [
         [99, 89, 100],
@@ -24,5 +26,5 @@ df2 = (pd.melt(df2).
 rename(columns={
     'variable':'subject',
     'value': 'score'
-}).query('score >= 90'))
+}).query('score >= 90').sort_values('score', ascending=False))
 print(df2)
