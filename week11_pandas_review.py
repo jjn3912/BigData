@@ -12,7 +12,5 @@ df = pd.DataFrame(
 
 )
 print(df)
-df_copy = df.loc[df['KOR']>=95,['KOR','MAT']]
-print(df_copy)
-print(df.at[1,'MAT'])
-print(df.iat[0,2])
+
+print(df.query('KOR>=95 and ENG>=95'))
