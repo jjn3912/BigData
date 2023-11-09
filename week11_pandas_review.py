@@ -20,3 +20,9 @@ df2 = pd.DataFrame(
 
 )
 print(df2)
+df2 = (pd.melt(df2).
+rename(columns={
+    'variable':'subject',
+    'value': 'score'
+}).query('score >= 90'))
+print(df2)
