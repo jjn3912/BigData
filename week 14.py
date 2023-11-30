@@ -3,7 +3,7 @@ import pandas as pd
 
 titanic = sns.load_dataset('titanic')
 
-pclass_survived= titanic.groupby('pclass')['survived'].sum()
-print(pclass_survived)
+age_survived = titanic.groupby(pd.cut(titanic['age'],list(range(0, 81, 10))))['survived'].sum()
+print(age_survived)
 
 
